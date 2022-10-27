@@ -1,12 +1,13 @@
-import JSConfetti from '../node_modules/js-confetti/dist/es/index.js';
-//temporary thing, this wont work on netlify
+import JSConfetti from "js-confetti";
+//use this, not like in previous exercise
+import "../css/style.css";
 
 
 
 const init = () => {
   const $form = document.querySelector("form");
   const jsConfetti = new JSConfetti()
-  
+
   $form.addEventListener("submit", (event) => {
     event.preventDefault();
     jsConfetti.addConfetti();
